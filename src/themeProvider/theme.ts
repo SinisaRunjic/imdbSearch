@@ -4,9 +4,9 @@ const appTheme = createTheme({
   spacing: 5,
   palette: {
     primary: {
-      light: '#fa4952',
-      main: '#e52a30',
-      dark: '#990008'
+      light: '#fff263',
+      main: '#fbc02d',
+      dark: '#c49000'
     },
   }
 });
