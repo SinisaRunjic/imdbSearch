@@ -1,3 +1,4 @@
+import { FC } from "react";
 import {
   AppBar as MUIAppBar,
   Toolbar,
@@ -7,8 +8,9 @@ import {
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import useStyles from "./AppBar.styles";
+import { IAppBar } from "./interface";
 
-const AppBar = () => {
+const AppBar: FC<IAppBar> = ({handleKeyPress}) => {
   const classes = useStyles();
   return (
     <Grid className={classes.root}>
@@ -23,6 +25,7 @@ const AppBar = () => {
             </Grid>
             <InputBase
               placeholder="Search…"
+              onKeyDown={handleKeyPress}
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
