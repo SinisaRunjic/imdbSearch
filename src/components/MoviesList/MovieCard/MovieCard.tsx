@@ -12,7 +12,6 @@ const MovieCard: FC<IMovie> = ({
   description,
   id,
   image,
-  resultType,
   title,
 }) => {
   const classes = useStyles();
