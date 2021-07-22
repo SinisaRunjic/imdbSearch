@@ -3,6 +3,7 @@ import {
   Toolbar,
   Typography,
   InputBase,
+  Grid,
 } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import useStyles from "./AppBar.styles";
@@ -10,16 +11,16 @@ import useStyles from "./AppBar.styles";
 const AppBar = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <Grid className={classes.root}>
       <MUIAppBar position="static">
         <Toolbar>
           <Typography className={classes.title} variant="h6" noWrap>
-            IMBD search
+            IMDB search
           </Typography>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
+          <Grid className={classes.search}>
+            <Grid className={classes.searchIcon}>
               <SearchIcon />
-            </div>
+            </Grid>
             <InputBase
               placeholder="Search…"
               classes={{
@@ -28,10 +29,10 @@ const AppBar = () => {
               }}
               inputProps={{ "aria-label": "search" }}
             />
-          </div>
+          </Grid>
         </Toolbar>
       </MUIAppBar>
-    </div>
+    </Grid>
   );
 };
 
